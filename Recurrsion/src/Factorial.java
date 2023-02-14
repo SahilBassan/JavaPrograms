@@ -7,7 +7,9 @@ public class Factorial {
         System.out.println(factorial(n));
     }
     public static int factorial(int n){
-        if(n==0) return 1;
-        return n * factorial(n-1);
+        if(n <= 1) return n;
+        int last = factorial(n-1);
+        int secondLast = factorial(n-2);
+        return last + secondLast;
     }
 }
