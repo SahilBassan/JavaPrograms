@@ -1,3 +1,5 @@
+//most important pattern
+
 import java.util.*;
 
 public class Sub_Sequence_of_array {
