@@ -31,6 +31,8 @@ public class Subsequence_count {
 
     //method to return only count of subsequence till k
     public static int subSequenceOfArray(int index, int[] arr, int n, int sum, int k){
+        //base case to reduce TC
+        if(sum > k) return 0;
         //base case
         if(index == n){
             if(sum == k){

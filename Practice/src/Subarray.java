@@ -3,27 +3,24 @@
 //to do
 //subsequence of string
 //subString of string
-import java.util.Scanner;
 
 public class Subarray {
     public static void main(String[] args) {
-        Scanner sc =  new Scanner(System.in);
-        System.out.println("Enter length of array ; ");
-        int n = sc.nextInt();
+        System.out.println(compute(new int[]{5, 6, 6, 8},4,4));
+    }
+    public static int compute(int[] input1 , int input2,int input3){
+        int n = input2;
+        int[] arr = input1;
+        int low = Integer.MAX_VALUE;
 
-        System.out.println("Enter all the elements of array separated by space :");
-        int[] arr = new int[n];
-        for (int i=0; i<n; i++){
-            arr[i] = sc.nextInt();
-        }
-
-        for (int i=0; i<n; i++){
-            for (int j=i; j<n; j++){
-                for (int k=i; k<=j; k++){
-                    System.out.print(arr[k] + " ");
-                }
-                System.out.println();
+        for(int i=0; i<n; i++){
+            int sum = 0;
+            for(int j=i; j<=input3; j++){
+                sum += arr[j];
             }
+            low = Math.min(sum, low);
         }
+
+        return low;
     }
 }
