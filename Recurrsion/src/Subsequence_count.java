@@ -8,6 +8,7 @@ in this case we don't need to carry any data structure like arraylist
 Note this time method will return int
 */
 
+//It is subset not sub sequence
 public class Subsequence_count {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -22,11 +23,14 @@ public class Subsequence_count {
         System.out.println("Enter the number k :");
         int k = sc.nextInt();
 
-        System.out.println("Number of sub-sequence of sum " + k + " is :");
+        System.out.println("Number of sub-set of sum " + k + " is :");
         System.out.println(subSequenceOfArray(0, arr, n, 0, k));
 
-        System.out.println("all possible sub-sequence in given array are : ");
+        System.out.println("all possible sub-set in given array are : ");
         System.out.println(subSequenceOfArray(0, arr, n));
+
+        //Formula for calculating all possible subset of given length
+        System.out.println("By Formula " + (int) Math.pow((double) 2, (double) n));
     }
 
     //method to return only count of subsequence till k

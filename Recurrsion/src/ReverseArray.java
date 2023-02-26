@@ -21,7 +21,6 @@ public class ReverseArray {
         int temp = arr[l];
         arr[l] = arr[r];
         arr[r] = temp;
-        reverseArray(arr,l+1,r-1);
-        return arr;
+        return reverseArray(arr,l+1,r-1);
     }
 }

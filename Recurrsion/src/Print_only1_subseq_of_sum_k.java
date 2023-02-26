@@ -34,15 +34,15 @@ public class Print_only1_subseq_of_sum_k {
 
         //pick
         arrl.add(arr[index]);
-        sum += arr[index];
+        //sum += arr[index];
         //in case we get true means we found one no need to recurse more
-        if(subSequenceOfArray(arrl, index+1, arr, n, sum, k)){
+        if(subSequenceOfArray(arrl, index+1, arr, n, sum + arr[index], k)){
             return true;
         }
-
         //not pick
         arrl.remove(arrl.size() - 1);
-        sum -= arr[index];
+        //sum -= arr[index];
+
         //in case we get true means we found one no need to recurse more
         if(subSequenceOfArray(arrl, index+1, arr, n, sum, k)){
             return true;
